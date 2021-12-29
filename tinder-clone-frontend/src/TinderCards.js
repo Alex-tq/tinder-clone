@@ -11,7 +11,7 @@ function TinderCards() {
 
     useEffect(() => {
         async function fetchData(){
-            const res = await axios.get('http://localhost:8001/tinder/cards')
+            const res = await axios.get('https://tinder-clone-backend-6.herokuapp.com/tinder/cards')
             setPeople(res.data)
         }
         fetchData()
@@ -20,7 +20,6 @@ function TinderCards() {
 
     const swiped = ( direction, nameToDelete) => {
         console.log('removing '+ nameToDelete)
-        //setLastDirection(direction)
     }
 
     const outOfFrame = (name) => {
